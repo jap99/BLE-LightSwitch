@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bleswitch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLE Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVP-tQ-DBs">
+                                <rect key="frame" x="144.5" y="89" width="86.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QBA-pf-WH8">
+                                <rect key="frame" x="163" y="291" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="34i-zg-UCK"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zu-Jx-eUo">
+                                <rect key="frame" x="93" y="295" width="34" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH4-JI-YIb">
+                                <rect key="frame" x="248" y="295" width="28" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iVP-tQ-DBs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="Eez-ns-yIA"/>
+                            <constraint firstItem="iVP-tQ-DBs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IFS-6y-RfP"/>
+                            <constraint firstItem="QBA-pf-WH8" firstAttribute="leading" secondItem="9Zu-Jx-eUo" secondAttribute="trailing" constant="36" id="RaX-BQ-WzY"/>
+                            <constraint firstItem="QBA-pf-WH8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UbI-X1-S1F"/>
+                            <constraint firstItem="QH4-JI-YIb" firstAttribute="leading" secondItem="QBA-pf-WH8" secondAttribute="trailing" constant="36" id="adB-sy-Ok2"/>
+                            <constraint firstItem="QBA-pf-WH8" firstAttribute="top" secondItem="iVP-tQ-DBs" secondAttribute="bottom" constant="178.5" id="jVA-Bn-wS5"/>
+                            <constraint firstItem="QH4-JI-YIb" firstAttribute="centerY" secondItem="QBA-pf-WH8" secondAttribute="centerY" id="qsk-nu-ZCx"/>
+                            <constraint firstItem="9Zu-Jx-eUo" firstAttribute="centerY" secondItem="QBA-pf-WH8" secondAttribute="centerY" id="wLz-JG-lqb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="offLabel" destination="9Zu-Jx-eUo" id="aXy-dT-Gio"/>
+                        <outlet property="onLabel" destination="QH4-JI-YIb" id="ICm-km-C2H"/>
+                        <outlet property="uiSwitch" destination="QBA-pf-WH8" id="hK2-aO-N6E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

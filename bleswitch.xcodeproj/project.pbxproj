@@ -12,6 +12,7 @@
 		9FFB67B31F16AEBE008C5D32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB67B11F16AEBE008C5D32 /* Main.storyboard */; };
 		9FFB67B51F16AEBE008C5D32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB67B41F16AEBE008C5D32 /* Assets.xcassets */; };
 		9FFB67B81F16AEBE008C5D32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB67B61F16AEBE008C5D32 /* LaunchScreen.storyboard */; };
+		9FFB67C11F16AEE5008C5D32 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFB67C01F16AEE5008C5D32 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9FFB67B41F16AEBE008C5D32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FFB67B71F16AEBE008C5D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FFB67B91F16AEBE008C5D32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFB67C01F16AEE5008C5D32 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFB67C11F16AEE5008C5D32 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				9FFB67AC1F16AEBE008C5D32 /* bleswitch */,
 				9FFB67AB1F16AEBE008C5D32 /* Products */,
+				9FFB67BF1F16AEE5008C5D32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				9FFB67B91F16AEBE008C5D32 /* Info.plist */,
 			);
 			path = bleswitch;
+			sourceTree = "<group>";
+		};
+		9FFB67BF1F16AEE5008C5D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FFB67C01F16AEE5008C5D32 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
